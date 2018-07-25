@@ -31,6 +31,7 @@
 		17DD0E1F207FB32100C56334 /* RecursiveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5307E311FB0F42F00EE67C5 /* RecursiveProtocol.swift */; };
 		3B83EE4720C41488005178A4 /* ContainsMultilineText.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3B83EE4520C41488005178A4 /* ContainsMultilineText.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B83EE4820C41488005178A4 /* UIView+IBInspectable.swift in Headers */ = {isa = PBXBuildFile; fileRef = 3B83EE4620C41488005178A4 /* UIView+IBInspectable.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		42ADF3EA2035AC0F00635E1E /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42ADF3E82035AB7D00635E1E /* Cell.xib */; };
 		8748240D20C6A88A00E92179 /* UIView+IBInspectable.swift in Headers */ = {isa = PBXBuildFile; fileRef = F5F899CF1FAA6A4D002E8FDA /* UIView+IBInspectable.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		8748240E20C6A88E00E92179 /* ContainsMultilineText.swift in Headers */ = {isa = PBXBuildFile; fileRef = F5307E3A1FB123C100EE67C5 /* ContainsMultilineText.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		88DEA97F1FCDBD78006C80EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DEA97D1FCDBD1F006C80EF /* Constants.swift */; };
@@ -108,6 +109,7 @@
 		17DD0E1B207FB2C200C56334 /* SkeletonView-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SkeletonView-iOS.plist"; sourceTree = "<group>"; };
 		3B83EE4520C41488005178A4 /* ContainsMultilineText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainsMultilineText.swift; path = Sources/Helpers/ContainsMultilineText.swift; sourceTree = "<group>"; };
 		3B83EE4620C41488005178A4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+IBInspectable.swift"; path = "Sources/Extensions/UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		42ADF3E82035AB7D00635E1E /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88DEA97D1FCDBD1F006C80EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8933C7841EB5B820000D00A4 /* SkeletonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				F5F622441FACA338007C062A /* Cell.swift */,
 				F5F899F81FABA607002E8FDA /* Main.storyboard */,
 				F5F899FB1FABA607002E8FDA /* Assets.xcassets */,
+				42ADF3E82035AB7D00635E1E /* Cell.xib */,
 				F5F899FD1FABA607002E8FDA /* LaunchScreen.storyboard */,
 			);
 			path = Example;
@@ -435,7 +438,7 @@
 					};
 					F5F899F11FABA607002E8FDA = {
 						CreatedOnToolsVersion = 9.1;
-						DevelopmentTeam = KWEMDK92F4;
+						DevelopmentTeam = MC6WZHXVVH;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -480,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5F899FF1FABA607002E8FDA /* LaunchScreen.storyboard in Resources */,
+				42ADF3EA2035AC0F00635E1E /* Cell.xib in Resources */,
 				F5F899FC1FABA607002E8FDA /* Assets.xcassets in Resources */,
 				F5F899FA1FABA607002E8FDA /* Main.storyboard in Resources */,
 			);
@@ -835,7 +839,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KWEMDK92F4;
+				DEVELOPMENT_TEAM = MC6WZHXVVH;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/Configs/SkeletonViewExampleInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -860,7 +864,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KWEMDK92F4;
+				DEVELOPMENT_TEAM = MC6WZHXVVH;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/Configs/SkeletonViewExampleInfo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

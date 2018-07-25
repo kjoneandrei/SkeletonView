@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.isSkeletonable = true
+        tableview.rowHeight = UITableViewAutomaticDimension
+        
+        tableview.register(UINib(nibName: "Cell", bundle: Bundle.main), forCellReuseIdentifier: "CellIdentifier")
     }
     
     override func viewDidAppear(_ animated: Bool) {
