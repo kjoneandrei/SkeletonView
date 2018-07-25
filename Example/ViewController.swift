@@ -43,8 +43,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.isSkeletonable = true
-        tableview.rowHeight = UITableViewAutomaticDimension
-        tableview.estimatedRowHeight = 200
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -138,7 +136,7 @@ extension ViewController: SkeletonTableViewDataSource {
         return 9
     }
     
-    func collectionSkeletonView(_ skeletonView: UITableView, cellIdenfierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "CellIdentifier"
     }
     
