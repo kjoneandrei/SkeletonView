@@ -16,10 +16,18 @@ extension UICollectionView: CollectionSkeleton {
     }
     
     var skeletonDataSource: SkeletonCollectionDataSource? {
-        get { return objc_getAssociatedObject(self, &DataSourceAssociatedKeys.dummyDataSource) as? SkeletonCollectionDataSource }
+        get { return objc_getAssociatedObject(self, &CollectionAssociatedKeys.dummyDataSource) as? SkeletonCollectionDataSource }
         set {
-            objc_setAssociatedObject(self, &DataSourceAssociatedKeys.dummyDataSource, newValue, AssociationPolicy.retain.objc)
+            objc_setAssociatedObject(self, &CollectionAssociatedKeys.dummyDataSource, newValue, AssociationPolicy.retain.objc)
             self.dataSource = newValue
+        }
+    }
+    
+    var skeletonDelegate: SkeletonCollectionDelegate? {
+        get { return objc_getAssociatedObject(self, &CollectionAssociatedKeys.dummyDelegate) as? SkeletonCollectionDelegate }
+        set {
+            objc_setAssociatedObject(self, &CollectionAssociatedKeys.dummyDelegate, newValue, AssociationPolicy.retain.objc)
+            self.delegate = newValue
         }
     }
     
@@ -28,7 +36,7 @@ extension UICollectionView: CollectionSkeleton {
             !(originalDataSource is SkeletonCollectionDataSource)
             else { return }
         
-        let dataSource = SkeletonCollectionDataSource(collectionViewDataSource: originalDataSource, rowHeight: 0.0)
+        let dataSource = SkeletonCollectionDataSource(collectionViewDataSource: originalDataSource)
         self.skeletonDataSource = dataSource
         reloadData()
     }
@@ -41,19 +49,6 @@ extension UICollectionView: CollectionSkeleton {
     }
 }
 
-public extension UICollectionView {
-    func prepareSkeleton(completion: @escaping (Bool) -> Void) {
-        guard let originalDataSource = self.dataSource as? SkeletonCollectionViewDataSource,
-            !(originalDataSource is SkeletonCollectionDataSource)
-            else { return }
-        
-        let dataSource = SkeletonCollectionDataSource(collectionViewDataSource: originalDataSource, rowHeight: 0.0)
-        self.skeletonDataSource = dataSource
-        performBatchUpdates({
-            self.reloadData()
-        }) { (done) in
-            completion(done)
-            
-        }
-    }
+extension UICollectionView: GenericCollectionView {
+    var scrollView: UIScrollView { return self }
 }
